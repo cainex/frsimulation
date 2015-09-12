@@ -48,11 +48,29 @@ sudo apt-get install cmake cmake-gui libpth-dev iverilog boost g++
 
 Currently frsimulation uses Cmake for a build system.  There are currently two cmake workspaces, the main workspace for building the libraries and a second workspace to build the example using Icarus Verilog.
 
-Install libraries using the command-line:
+Build and install libraries using the command-line:
 ```
 mkdir build
 cd build
-cmake -D USE_IVL=1 -D CMAKE_INSTALL_PREFIX=<install location> $(FRSIMULATION_HOME)
+cmake -D USE_IVL=1 -D CMAKE_INSTALL_PREFIX=<install location> <frsimulation_home>
 make
 make install
 ```
+
+Build and install examples using the command-line:
+```
+mkdir build_ex
+cd build_ex
+cmake -D FRVM_PATH=<library install location> -D CMAKE_INSTALL_PREFIX=<install location> <frsimulation_home>/examplex/fric
+make
+make install
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<install location>
+```
+
+Run the example randTest:
+```
+cd <example install location>
+vvp -M lib -m librandTest bin/fric_rtl
+```
+
+
