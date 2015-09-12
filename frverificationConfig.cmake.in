@@ -1,0 +1,38 @@
+#****************************************************************************
+# Copyright (c) 2015 by Daniel Grabowski.
+#
+# This file is part of FrSim.
+# 
+# FrSim is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# FrSim is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with FrSim.  If not, see <http://www.gnu.org/licenses/>.
+#
+# Created by: Daniel Grabowski, Andrew Worcester
+#
+#****************************************************************************
+
+# - Config file for the FooBar package
+# It defines the following variables
+#  FRVERIFICATION_INCLUDE_DIRS - include directories for FooBar
+#  FRVERIFICATION_LIBRARIES    - libraries to link against
+#  FRVERIFICATION_EXECUTABLE   - the bar executable
+
+# Compute paths
+get_filename_component(FRVERIFICATION_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+set(FRVERIFICATION_INCLUDE_DIRS "@CONF_INCLUDE_DIRS@")
+
+# Our library dependencies (contains definitions for IMPORTED targets)
+include("${FRVERIFICATION_CMAKE_DIR}/frverificationTargets.cmake")
+
+# These are IMPORTED targets created by FooBarTargets.cmake
+set(FRVERIFICATION_LIBRARIES foo)
+set(FRVERIFICATION_EXECUTABLE bar)
