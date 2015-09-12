@@ -37,4 +37,22 @@ The FreeRange RTL Verification Library requires:
 * cmake
 * pth
 * iverilog (optionally)
+* boost
+* g++
 
+Installation of prequisites on Ubuntu:
+
+```
+sudo apt-get install cmake cmake-gui libpth-dev iverilog boost g++
+```
+
+Currently frsimulation uses Cmake for a build system.  There are currently two cmake workspaces, the main workspace for building the libraries and a second workspace to build the example using Icarus Verilog.
+
+Install libraries using the command-line:
+```
+mkdir build
+cd build
+cmake -D USE_IVL=1 -D CMAKE_INSTALL_PREFIX=<install location> $(FRSIMULATION_HOME)
+make
+make install
+```
