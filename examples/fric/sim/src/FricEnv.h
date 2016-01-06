@@ -1,9 +1,12 @@
 #ifndef _FRIC_ENV_H_
 #define _FRIC_ENV_H_
 
-#include "FrVmEnv.h"
-#include "FrSimCReg.h"
-#include "FrSimIface.h"
+#include "frvm/FrVmEnv.h"
+#include "frvm/FrVmCallback.h"
+
+#include "frsim/FrSimCReg.h"
+#include "frsim/FrSimIface.h"
+#include "frsim/FrSimReport.h"
 
 #include "FricXactor.h"
 #include "FricMasterIf.h"
@@ -12,8 +15,6 @@
 #include "FricSlaveXactor.h"
 #include "FricMasterGen.h"
 #include "FricResponseGen.h"
-#include "FrVmCallback.h"
-#include "FrSimReport.h"
 #include "FricData.h"
 #include "FricMonitor.h"
 #include "FricChecker.h"

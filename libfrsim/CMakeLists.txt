@@ -64,7 +64,7 @@ add_library(frsim SHARED ${SOURCE_FILES})
 
 target_include_directories(frsim PUBLIC  
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>  
-    $<INSTALL_INTERFACE:include/frsim>  # <prefix>/include/mylib
+    $<INSTALL_INTERFACE:${INSTALL_INCLUDE_DIR}/frsim>  # <prefix>/include/mylib
 )
 
 # add_subdirectory(tests)

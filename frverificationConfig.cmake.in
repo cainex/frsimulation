@@ -33,6 +33,5 @@ set(FRVERIFICATION_INCLUDE_DIRS "@CONF_INCLUDE_DIRS@")
 # Our library dependencies (contains definitions for IMPORTED targets)
 include("${FRVERIFICATION_CMAKE_DIR}/frverificationTargets.cmake")
 
-# These are IMPORTED targets created by FooBarTargets.cmake
-set(FRVERIFICATION_LIBRARIES foo)
-set(FRVERIFICATION_EXECUTABLE bar)
+# These are IMPORTED targets created by frverificationTargets.cmake
+set(FRVERIFICATION_LIBRARIES frsim frvm)

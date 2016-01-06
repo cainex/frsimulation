@@ -24,12 +24,14 @@
 #define FRVMXACTOR_H_
 
 #include <vector>
-#include "FrSimReport.h"
 #include <string>
+
+#include "FrSimReport.h"
 #include "FrSimThread.h"
-#include "FrVmCallback.h"
 #include "FrSimThreadTracker.h"
 #include "FrSimIface.h"
+
+#include "FrVmCallback.h"
 
 class FrVmXactor
 {

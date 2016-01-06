@@ -36,12 +36,27 @@ set (HEADER_FILES
 set (SHARED_LIB_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 set (SHARED_LIB_INCLUDE_DIR ${SHARED_LIB_INCLUDE_DIR} PARENT_SCOPE)
 
-set (FRVM_PATH /usr/lib CACHE PATH "Path of libfrm library")
+set (FRV_PATH /usr/local/lib/CMake/frverification CACHE PATH "Path of frverification library")
 
-include_directories(${FRVM_PATH}/include)
-include_directories(${FRVM_PATH}/include/frvm)
-include_directories(${FRVM_PATH}/include/frsim)
-link_directories(${FRVM_PATH}/lib)
+set (Boost_USE_STATIC_LIBS OFF)
+set (Boost_USE_MULTITHREAD ON)
+set (Boost_USE_STATIC_RUNTIME OFF)
+set (BOOST_INCLUDEDIR /usr/include)
+
+find_package(Boost)
+
+if(Boost_FOUND)
+  message(STATUS "Boost found!")
+  include_directories(${Boost_INCLUDE_DIRS})
+endif()
+
+find_package(frverification PATHS ${FRV_PATH} NO_CMAKE_PACKAGE_REGISTRY NO_CMAKE_ENVIRONMENT_PATH)
+
+if (frverification_FOUND)
+  message(STATUS "Found FRVerification Library!")
+  message(STATUS ${FRVERIFICATION_INCLUDE_DIRS})
+  include_directories(${FRVERIFICATION_INCLUDE_DIRS})
+endif()
 
 set (CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -fPIC)
 

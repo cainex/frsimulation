@@ -68,7 +68,7 @@ file(RELATIVE_PATH REL_INCLUDE_DIR "${INSTALL_CMAKE_DIR}"
 set(CONF_INCLUDE_DIRS "${PROJECT_SOURCE_DIR}" "${PROJECT_BINARY_DIR}")
 configure_file(frverificationConfig.cmake.in
   "${PROJECT_BINARY_DIR}/frverificationConfig.cmake" @ONLY)
-set(CONF_INCLUDE_DIRS "\${FRVERIFICATION_CMAKE_DIR}/${REL_INCLUDE_DIR}")
+set(CONF_INCLUDE_DIRS "\${FRVERIFICATION_CMAKE_DIR}/${REL_INCLUDE_DIR}" "\${FRVERIFICATION_CMAKE_DIR}/${REL_INCLUDE_DIR}/frsim" "\${FRVERIFICATION_CMAKE_DIR}/${REL_INCLUDE_DIR}/frvm")
 configure_file(frverificationConfig.cmake.in
   "${PROJECT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/frverificationConfig.cmake" @ONLY)
 configure_file(frverificationConfigVersion.cmake.in

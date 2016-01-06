@@ -50,7 +50,7 @@ add_library(frvm SHARED ${SOURCE_FILES})
 
 target_include_directories(frvm PUBLIC  
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>  
-    $<INSTALL_INTERFACE:include/frvm>  # <prefix>/include/mylib
+    $<INSTALL_INTERFACE:${INSTALL_INCLUDE_DIR}/frvm>  # <prefix>/include/mylib
 )
 
 set_target_properties(frvm PROPERTIES

@@ -1,5 +1,5 @@
-#include "FrVmXactor.h"
-#include "FrVmChannel.h"
+#include "frvm/FrVmXactor.h"
+#include "frvm/FrVmChannel.h"
 #include "FricData.h"
 #include "FricSlaveIf.h"
 

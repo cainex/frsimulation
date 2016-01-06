@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 #include <list>
-#include "FrSimReport.h"
+#include "frsim/FrSimReport.h"
 #include "FricData.h"
 
 class FricChecker

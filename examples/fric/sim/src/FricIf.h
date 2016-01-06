@@ -2,7 +2,7 @@
 #define FRIC_IF_H_
 
 #include <string>
-#include "FrSimCReg.h"
+#include "frsim/FrSimCReg.h"
 
 class FricIf
 {

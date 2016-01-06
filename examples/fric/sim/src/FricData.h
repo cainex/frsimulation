@@ -28,9 +28,9 @@
 #ifndef FRICDATA_H
 #define FRICDATA_H
 
-#include "FrSimReg.h"
-#include "FrSimReport.h"
-#include "FrVmData.h"
+#include "frsim/FrSimReg.h"
+#include "frsim/FrSimReport.h"
+#include "frvm/FrVmData.h"
 
 class FricData : public FrVmData {
 public:

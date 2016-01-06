@@ -3,8 +3,8 @@
 
 #include <string>
 #include "FricData.h"
-#include "FrVmChannel.h"
-#include "FrVmXactor.h"
+#include "frvm/FrVmChannel.h"
+#include "frvm/FrVmXactor.h"
 
 class FricResponseGenData : public FricData
 {
